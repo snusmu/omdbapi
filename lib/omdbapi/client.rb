@@ -81,6 +81,7 @@ module OMDB
       # @return [Hash]
       def build_params(options)
         params = {}
+        params[:apikey] = options[:apikey] if options[:apikey]
         params[:t] = options[:title] if options[:title]
         params[:i] = options[:id] if options[:id]
         params[:y] = options[:year] if options[:year]
